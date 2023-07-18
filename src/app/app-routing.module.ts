@@ -8,6 +8,7 @@ import { PeopleDetailComponent } from './people-detail/people-detail.component';
 
 // The constant 'routes' array of type Routes which will be used to hold information for each route.
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'people' },
   { path: 'people', component: PeopleListComponent },
   { path: 'people/:id', component: PeopleDetailComponent },
 ];

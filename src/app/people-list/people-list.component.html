@@ -1,1 +1,15 @@
-<p>People List</p>
+<h3>People List</h3>
+<table style="width: 50%; margin: auto">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let person of people" style="text-align: center">
+    <td>{{ person.name }}</td>
+    <td>{{ person.email }}</td>
+    <td>
+      <a [routerLink]="['/people', person.id]">Go to details</a>
+    </td>
+  </tr>
+</table>
